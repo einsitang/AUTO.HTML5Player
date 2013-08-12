@@ -1,6 +1,6 @@
 {
 	"name" : "视频自动转HTML5播放器",
-	"version" : "1",
+	"version" : "1.1",
 	"description" : "HTML5 Player",
 	"page_action" : {
 		"default_title" : "自动检测启动HTML5播放器",
@@ -27,7 +27,8 @@
 		"*://*.xunlei.com/*",
 		"*://*.youku.com/*",
 		"*://*.163.com/*",
-		"http://localhost/*"
+		"*://*.github.com/*",
+		"http://*/*"
 	],
 	"manifest_version": 2
 }

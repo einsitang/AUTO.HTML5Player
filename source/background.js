@@ -17,7 +17,6 @@ var autoHtml5Player = function(tabId,changeInfo,tab){
 					file : 'source/autoHtml5Player.css'
 				},null);
 
-				console.log(chrome.extension);
 
 				chrome.tabs.executeScript(tab.id, {
 					file:'source/importScript.js',
