@@ -1,0 +1,446 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.eot?v=3.0.1');
+  src: url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
+    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.svg?v=3.0.1') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@-webkit-keyframes rotate{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotate{
+	0%{
+		-moz-transform: rotate(0deg);
+	}
+	100%{
+		-moz-transform: rotate(360deg);
+	}
+}
+.youkuhtml5playerbookmark2-layer div{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+}
+.youkuhtml5playerbookmark2-cover{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(255,255,255,0.9);
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	z-index:9999998;
+}
+.youkuhtml5playerbookmark2-cover.youkuhtml5playerbookmark2-block{
+	background:rgba(0,0,0,1);
+}
+.youkuhtml5playerbookmark2-cover.youkuhtml5playerbookmark2-block ~ .youkuhtml5playerbookmark2-layer{
+	box-shadow:none;
+	overflow: hidden;
+	-webkit-filter:none;
+	-moz-filter:none;
+}
+.youkuhtml5playerbookmark2-layer{
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:800px;
+	height:450px;
+	margin:-240px 0 0 -400px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	z-index:9999999;
+	font-weight:bold;
+	box-shadow:0px 0px 3px #333;
+	-webkit-filter:drop-shadow(0px 0px 15px rgba(63,179,250,0.7));
+	-moz-filter:drop-shadow(0px 0px 15px rgba(63,179,250,0.7));
+	-webkit-transition:width 0.2s ease, height 0.2s ease;
+	-moz-transition:width 0.2s ease, height 0.2s ease;
+}
+.youkuhtml5playerbookmark2-layer.youkuhtml5playerbookmark2-full{
+	margin:0px;
+	top:0;
+	left:0;
+	bottom:auto;
+	right:auto;
+	width:100%;
+	height:100%;
+}
+.youkuhtml5playerbookmark2-title{
+	padding:0 10px;
+	height:30px;
+	font-size:16px;
+	line-height:30px;
+	text-align:center;
+	color:#fff;
+	position:absolute;
+	top:-26px;
+	left:0;
+	font-family:arial,sans-serif;
+	white-space:nowrap;
+	background-image:-webkit-linear-gradient(top, #3fb3fa 0%, #3492c4 100%);
+	background-image:-moz-linear-gradient(top, #3fb3fa 0%, #3492c4 100%);
+}
+.youkuhtml5playerbookmark2-player{
+	width:100%;
+	height:100%;
+	position:relative;
+	background:#000;
+}
+.youkuhtml5playerbookmark2-video{
+	width:100%;
+	height:100%;
+	background:#000;
+}
+.youkuhtml5playerbookmark2-ctrlbar{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:2;
+	overflow:hidden;
+}
+.youkuhtml5playerbookmark2-ctrlbarbottom{
+	position:absolute;
+	height:40px;
+	right:0;
+	bottom:0;
+	left:0;
+	box-shadow: 0 0 2px #333;
+	background-image:-webkit-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	background-image:-moz-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	-webkit-transition:opacity 0.3s ease;
+	-moz-transition:opacity 0.3s ease;
+	opacity:0;
+}
+.youkuhtml5playerbookmark2-ctrlbar.youkuhtml5playerbookmark2-ctrlbarhover .youkuhtml5playerbookmark2-ctrlbarbottom,
+.youkuhtml5playerbookmark2-ctrlbar.youkuhtml5playerbookmark2-ctrlbarhover .youkuhtml5playerbookmark2-close,
+.youkuhtml5playerbookmark2-ctrlbarbottom:hover{
+	opacity: 0.9;
+}
+.youkuhtml5playerbookmark2-volume::after,
+.youkuhtml5playerbookmark2-progress::after,
+.youkuhtml5playerbookmark2-progressNum::after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	width:1px;
+	box-shadow: 0 0 2px #999 inset;
+}
+.youkuhtml5playerbookmark2-btn::after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:-4px;
+	width:1px;
+	box-shadow: 0 0 2px #999 inset;	
+}
+.youkuhtml5playerbookmark2-progressNum{
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:110px;
+	left:0px;
+	text-align:center;
+	line-height: 40px;
+	font-size:14px;
+	color:#333;
+	font-weight: bold;
+	font-family: arial, sans-serif;
+	white-space:nowrap;
+	letter-spacing:-1px;
+	overflow:hidden;
+}
+.youkuhtml5playerbookmark2-progress{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:110px;
+	right:400px;
+	cursor:pointer;
+}
+.youkuhtml5playerbookmark2-volume{
+	position:absolute;
+	right:280px;
+	bottom:0px;
+	top:0;
+	width:100px;
+	cursor:pointer;
+}
+div.youkuhtml5playerbookmark2-volume::before{
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	content:'\f028';
+	position:absolute;
+	display:block;
+	top:1px;
+	font-size:18px;
+	left:-14px;
+	width:18px;
+	bottom:0;
+	text-align: center;
+	line-height: 40px;	
+	color:#333;
+}
+.youkuhtml5playerbookmark2-btns{
+	position:absolute;
+	right:0px;
+	top:0;
+	bottom:0px;
+	text-align:right;
+}
+.youkuhtml5playerbookmark2-btn{
+	position:relative;
+	height:36px;
+	min-width: 40px;
+	line-height:38px;
+	text-align:center;
+	display:inline-block;
+	cursor:pointer;
+	font-size:13px;
+	color:#333;
+	font-family: arial,sans-serif;
+	font-weight:bold;
+}
+div.youkuhtml5playerbookmark2-btn.youkuhtml5playerbookmark2-cmtBtn::before{
+	font-family: 'FontAwesome';
+	display:block;
+	content:'\f086';
+	visibility: visible;
+}
+div.youkuhtml5playerbookmark2-btn.youkuhtml5playerbookmark2-allscreen::before{
+	font-family: 'FontAwesome';
+	content:'\f065';
+	display:block;
+	visibility: visible;
+}
+div.youkuhtml5playerbookmark2-btn.youkuhtml5playerbookmark2-fullscreen::before{
+	font-family: 'FontAwesome';
+	content:'\f0b2';
+	display:block;
+	visibility: visible;
+}
+.youkuhtml5playerbookmark2-select{
+	background-image:-webkit-linear-gradient(bottom, #fcfcfc 0%, #e2e2e2 100%);
+	background-image:-moz-linear-gradient(bottom, #fcfcfc 0%, #e2e2e2 100%);
+	border-bottom: 4px solid #3fb3fa;
+}
+.youkuhtml5playerbookmark2-range{
+	position:absolute;
+	left:10px;
+	top:50%;
+	margin-top:-4px;
+	height:8px;
+	right:20px;
+	border-radius:7px;
+	box-shadow:0 0 2px #000 inset;
+	background:rgba(50,50,50,0.7);	
+}
+.youkuhtml5playerbookmark2-rangeinner{
+	margin:0;
+	position: absolute;
+	top:1px;
+	bottom:1px;
+	right:1px;
+	left:1px;
+	padding:1px;
+}
+.youkuhtml5playerbookmark2-rangebtn{
+	margin:0;
+	height:100%;
+	width:0%;
+	border-radius:3px;
+	background-image:-webkit-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	background-image:-moz-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	box-shadow:0 0 2px #000;
+	position:relative;
+}
+.youkuhtml5playerbookmark2-rangebtn:after{
+	content:'';
+	width:12px;
+	height:12px;
+	position:absolute;
+	top:-6px;
+	right:-10px;
+	background-image:-webkit-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	background-image:-moz-linear-gradient(top, #fcfcfc 0%, #e2e2e2 100%);
+	border-radius:10px;
+	border:2px solid #444;
+	visibility:visible;
+}
+.youkuhtml5playerbookmark2-close{
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:20px;
+	height:20px;
+	font-size:20px;
+	line-height:20px;
+	font-family: arial,sans-serif;
+	color:#eee;
+	text-shadow:0px 0px 1px #333;
+	cursor:pointer;
+	opacity: 0;
+	-webkit-transition:opacity 0.3s ease;
+	-moz-transition:opacity 0.3s ease;
+}
+div.youkuhtml5playerbookmark2-close::after{
+	font-family: 'FontAwesome';
+	content:'\f00d';
+	visibility: visible;
+}
+.youkuhtml5playerbookmark2-center{
+	position:absolute;
+	top:30px;
+	right:60px; 
+	bottom:50px;
+	left:60px;
+}
+.youkuhtml5playerbookmark2-center .youkuhtml5playerbookmark2-center-before{
+	display:none;
+}
+.youkuhtml5playerbookmark2-center .youkuhtml5playerbookmark2-center-after{
+	display:none;
+}
+.youkuhtml5playerbookmark2-center.youkuhtml5playerbookmark2-pause .youkuhtml5playerbookmark2-center-before{
+	display:block;
+	width:90px;
+	height:90px;
+	top:50%;
+	left:50%;
+	font-family:arial,sans-serif;
+	position:absolute;
+	border-radius:50px;
+	border:5px solid #fcfcfc;
+	margin:-50px 0 0 -50px;
+	box-shadow: 0 0 10px #333 inset, 0 0 10px #333;
+	background:rgba(0,0,0,0.5);
+	visibility:visible;
+}
+.youkuhtml5playerbookmark2-center.youkuhtml5playerbookmark2-pause .youkuhtml5playerbookmark2-center-after{
+	display:block;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	border-left:40px solid #fcfcfc;
+	border-top:25px solid transparent;
+	border-right:30px solid transparent;
+	border-bottom:25px solid transparent;
+	margin:-25px 0 0 -16px;
+	visibility:visible;
+}
+.youkuhtml5playerbookmark2-center.youkuhtml5playerbookmark2-loading .youkuhtml5playerbookmark2-center-before{	
+	font-size:90px;
+	font-weight: bolder;
+	display:block;
+	width:90px;
+	height:90px;
+	text-align:center;
+	line-height:92px;
+	top:50%;
+	left:50%;
+	font-family:arial,sans-serif;
+	position:absolute;
+	color:#fcfcfc;
+	border-radius:50px;
+	/*border:5px solid #fcfcfc;*/
+	margin:-50px 0 0 -50px;
+	text-shadow: 0 0 10px #333;
+	/*background:rgba(0,0,0,0.5);*/
+	visibility:visible;
+	-webkit-animation:rotate;
+	-moz-animation:rotate;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-timing-function:linear;
+}
+div.youkuhtml5playerbookmark2-center.youkuhtml5playerbookmark2-loading .youkuhtml5playerbookmark2-center-before:before{
+	content:'\f110';
+	font-family:'FontAwesome';
+	visibility:visible;
+}
+
+/*弹幕*/
+.youkuhtml5playerbookmark2-comment{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	pointer-events:none;
+	overflow:hidden;
+}
+.youkuhtml5playerbookmark2-commentFloat{
+	position: absolute;
+	top:10px;
+	left:0;
+	right:0;
+	bottom:0;
+	pointer-events:none;
+}
+.youkuhtml5playerbookmark2-commentBottom{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	pointer-events:none;
+}
+.youkuhtml5playerbookmark2-commentBlock{
+	display:inline-block;
+	position:absolute;
+	color:#fff;
+	font-size:22px;
+	white-space: nowrap;
+	font-weight: bold;
+	letter-spacing: -3px;
+	text-shadow: 1px 1px 2px #000;
+	pointer-events:none;
+}
+.youkuhtml5playerbookmark2-commentBlockBottom{
+	color:#fff;
+	width:auto;
+	display:block;
+	font-weight: bold;
+	font-size:22px;
+	letter-spacing: -3px;
+	text-shadow: 1px 1px 2px #000;
+	pointer-events:none;
+	text-align: center;
+	padding-bottom:8px;
+}
+.youkuhtml5playerbookmark2-logArea{
+	position:fixed;
+	left:0;
+	bottom:0;
+	z-index:9999999;
+}
+.youkuhtml5playerbookmark2-log{
+	white-space: nowrap;
+	padding-left:10px;
+	float:left;
+	clear:both;
+	font-size: 12px;
+}
+div.youkuhtml5playerbookmark2-log:after{
+	font-family:"FontAwesome";
+	content:'  \f046';
+}
