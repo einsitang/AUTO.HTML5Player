@@ -1,19 +1,29 @@
-function addJavascript(jsname,pos) {
+function addJavascript(id,jsname,pos) {
+	var t = document.getElementById(id);
 	var th = document.getElementsByTagName(pos)[0];
 	var s = document.createElement('script');
+	s.setAttribute('id',id);
 	s.setAttribute('type','text/javascript');
 	s.setAttribute('src',jsname);
-	th.appendChild(s);
+	if(!t){
+		th.appendChild(s);
+	}
 }
 
-function addCss(cssPath,pos){
+function addCss(id,cssPath,pos){
+	var t = document.getElementById(id);
 	var th = document.getElementsByTagName(pos)[0];
 	var s = document.createElement('link');
+	s.setAttribute('id',id);
 	s.setAttribute('rel','tstylesheet');
 	s.setAttribute('href',cssPath);
-	th.appendChild(s);
+	if(!t){
+		th.appendChild(s);
+	}
+	
 }
 
 
-addJavascript('https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js','body');
+addJavascript('html5PlayerJs','https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js','body');
+
 //http://localhost:8080/goaland_new
