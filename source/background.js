@@ -108,7 +108,16 @@ var openHtml5Player = function(tab){
 var closeHtml5Player = function(tab){
 	iconPath = 'icon.png';
 	titleStr = '自动HTML5视频播放器关闭中';
+/*
+	chrome.tabs.executeScript(tab.id, {
+					code:'/source/importScript.js',
+					allFrames : true
+				}, function(){
+					
+				});
+*/
 	setTabShow(tab,titleStr,iconPath);
+
 }
 //设置插件图标显示信息
 var setTabShow = function(tab,titleStr,iconPath){
