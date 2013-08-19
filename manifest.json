@@ -1,20 +1,21 @@
 {
 	"name" : "视频自动转HTML5播放器",
-	"version" : "1.1",
+	"version" : "2.0",
 	"description" : "HTML5 Player",
 	"page_action" : {
 		"default_title" : "自动检测启动HTML5播放器",
-		"default_icon" : "icon.png"
+		"default_icon" : "icon.png",
+		"default_popup" : "setting.html"
 	},
 	"background":{
-		"scripts":["source/background.js"]
+		"scripts":["source/jquery.min.js","source/background.js"]
 	},
 	
 	"icons" : {
 		"48" : "icon.png"
 	},
 	"permissions": [
-		"notifications","tabs",
+		"notifications","tabs","*://*/*",
 		"*://*.56.com/*",
 		"*://*.acfun.tv/*",
 		"*://*.bilibili.tv/*",
@@ -27,8 +28,7 @@
 		"*://*.xunlei.com/*",
 		"*://*.youku.com/*",
 		"*://*.163.com/*",
-		"*://*.github.com/*",
-		"http://*/*"
+		"*://*.github.com/*"
 	],
 	"manifest_version": 2
 }

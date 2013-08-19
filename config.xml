@@ -1,0 +1,17 @@
+<setting>
+	<param name="AUTO.START.HTML5.PLAYER">true</param>
+	<params name="AUTO.START.HTML5.URL">
+		<url>56.com</url>
+		<url>acfun.tv</url>
+		<url>bilibili.tv</url>
+		<url>iqiyi.com</url>
+		<url>letv.com</url>
+		<url>qq.com</url>
+		<url>sina.com</url>
+		<url>sohu.com</url>
+		<url>tudou.com</url>
+		<url>xunlei.com</url>
+		<url>youku.com</url>
+		<url>163.com</url>
+	</params>
+</setting>
