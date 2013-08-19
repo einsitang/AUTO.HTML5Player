@@ -1,6 +1,5 @@
-
-var CONFIG_FILE = 'config.xml' ;
-var myport,req;
+var DEFAULT_URL_LIST = '56.com,acfun.tv,bilibili.tv,iqiyi.com,letv.com,qq.com,sina.com,sohu.com,tudou.com,xunlei.com,youku.com,163.com';
+var req;
 var config ={};
 //加载配置文件信息
 var loadConfigFile = function(fileName){
@@ -27,26 +26,19 @@ var setConfig = function(config){
 	chrome.tabs.getSelected(null,function(tab){
 		updatePluginStatus(tab);
 	});
-	
 
-	//写入配置文件
-	//writeConfigFile(config,'config.xml');
+	//saveLocalStorageConfig
+	saveLocalStorageConfig();
+	
 }
-//写入修改的配置文件
-var writeConfigFile = function(config,fileName){
-	console.log('this function(-- writeConfigFile --) to be writeing...');
-	var fileReader = new FileReader();
-	console.log(fileReader);
-	fileReader.onload = function(e){
-		console.log(e);
-		console.log(e.target);
-		var contents = e.target.result;
-		console.log(contents);
+
+//保存配置到localStorage
+var saveLocalStorageConfig = function(){
+	for(var item in config){
+		window.localStorage[item] = config[item];
 	}
-	var text = fileReader.readAsText(CONFIG_FILE);
-	console.log('done!');
-	console.log(text);
 }
+
 //获取配置文件信息
 var madeSetting = function(configXML){
 	if(configXML){
@@ -81,10 +73,18 @@ var madeParamsSetting = function(list){
 		}
 	}
 }
+
+var loadConfigLocalStorage = function(){
+	this.config = {};
+	this.config['AUTO.START.HTML5.PLAYER'] = window.localStorage['AUTO.START.HTML5.PLAYER']||false;
+	this.config['AUTO.START.HTML5.URL'] = window.localStorage['AUTO.START.HTML5.URL']||DEFAULT_URL_LIST;
+}
+
 //初始化
 var init = function(tab){
 	//加载配置文件
-	loadConfigFile(CONFIG_FILE);
+	//loadConfigFile(CONFIG_FILE);
+	loadConfigLocalStorage();
 }
 //开启插件
 var openHtml5Player = function(tab){
@@ -131,14 +131,24 @@ var setTabShow = function(tab,titleStr,iconPath){
 	});
 }
 
+var isUrl = function(url,urlList){
+	var urls = urlList.split(',');
+	
+	for(var u in urls){
+		if(url.indexOf(urls[u])!=-1) return true;
+	}
+	return false;
+}
+
 //更新插件状态
 var updatePluginStatus = function(tab){
 	chrome.pageAction.show(tab.id);
 	if(tab.status=='complete'){
 		var autoStart = this.config['AUTO.START.HTML5.PLAYER'];
+		var urlList = this.config['AUTO.START.HTML5.URL'];
 		if(autoStart == 'true'||autoStart == true){
-			openHtml5Player(tab);
-				
+			if(isUrl(tab.url,urlList))
+				openHtml5Player(tab);
 		}else{
 			closeHtml5Player(tab);
 				

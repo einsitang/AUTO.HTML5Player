@@ -26,4 +26,4 @@ function addCss(id,cssPath,pos){
 
 addJavascript('html5PlayerJs','https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js','body');
 
-//http://localhost:8080/goaland_new
+//https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js
