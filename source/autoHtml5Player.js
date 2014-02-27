@@ -379,7 +379,7 @@
 		}
 	}),youkuhtml5playerbookmark2.add(function (e,t) {
 		var n=window._page_,r=function (t) {
-			if(n.channel=="view") {
+			if(window._page_.channel=="view") {
 				var r=location.href.match(/v\_([0-9a-zA-Z]+)\.html/);
 				r&&(r=r[1],t({
 					"&#x9AD8;&#x6E05;":"http://vxml.56.com/m3u8/"+r+"/"
@@ -394,7 +394,7 @@
 				t(n),window[i]=s;
 			}
 		};return {
-			reg:/56\.com/.test(window.location.host)&&n,call:function (e) {
+			reg:/56\.com/.test(window.location.host)&&window._page_,call:function (e) {
 				return r(function (t) {
 					return e({
 						urls:t,flashElementId:"mod_player"
