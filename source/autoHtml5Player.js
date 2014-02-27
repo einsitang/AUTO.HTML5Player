@@ -386,7 +386,7 @@
 				}))
 			}else {
 				var i="jsonp_dfInfo",s=window[i];
-				console.log(e, e.jsonp, e.json);
+				console.log("http://vxml.56.com/json/" + oFlv.o.EnId);
 				e.jsonp("http://vxml.56.com/ipad/"+(window.oFlv.o.id||window._oFlv_c.id)+"/?src=site&callback=",function (e) {
 					urlList=e.df;
 					var n={
