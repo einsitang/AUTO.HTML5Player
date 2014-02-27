@@ -385,14 +385,13 @@
 					"&#x9AD8;&#x6E05;":"http://vxml.56.com/m3u8/"+r+"/"
 				}))
 			}else {
-				var i="jsonp_dfInfo",s=window[i];
-				console.log("http://vxml.56.com/json/" + oFlv.o.EnId);
-				e.jsonp("http://vxml.56.com/ipad/"+(window.oFlv.o.id||window._oFlv_c.id)+"/?src=site&callback=",function (e) {
-					urlList=e.df;
-					var n={
-					};
-					for(var r=e.df.length-1;r>=0;r--)n[e.df[r].type]=e.df[r].url;t(n),window[i]=s
-				},i)
+				var i="jsonp_dfInfo",s=window[i],id=(window.oFlv.o.id||window._oFlv_c.id);
+				var n={
+					qvga : "http://vxml.56.com/html5/"+id+"/?src=m&res=qvga",
+					 vga : "http://vxml.56.com/html5/"+id+"/?src=m&res=vga",
+					wvga : "http://vxml.56.com/html5/"+id+"/?src=m&res=wvga",
+				};
+				t(n),window[i]=s;
 			}
 		};return {
 			reg:/56\.com/.test(window.location.host)&&n,call:function (e) {
