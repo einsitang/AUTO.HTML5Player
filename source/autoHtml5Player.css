@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'FontAwesome';
-  src: url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.eot?v=3.0.1');
-  src: url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
-    url('https://github.com/zythum/Font-Awesome/raw/master/font/fontawesome-webfont.svg?v=3.0.1') format("svg");
+  src: url('https://rawgit.com/zythum/Font-Awesome/master/font/fontawesome-webfont.eot?v=3.0.1');
+  src: url('https://rawgit.com/zythum/Font-Awesome/master/font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('https://rawgit.com/zythum/Font-Awesome/master/font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('https://rawgit.com/zythum/Font-Awesome/master/font/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
+    url('https://rawgit.com/zythum/Font-Awesome/master/font/fontawesome-webfont.svg?v=3.0.1') format("svg");
   font-weight: normal;
   font-style: normal;
 }

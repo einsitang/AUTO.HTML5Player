@@ -24,6 +24,6 @@ function addCss(id,cssPath,pos){
 }
 
 
-addJavascript('html5PlayerJs','https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js','body');
+addJavascript('html5PlayerJs','https://rawgit.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js','body');
 
 //https://raw.github.com/forfuns/AUTO.HTML5Player/master/source/autoHtml5Player.js
